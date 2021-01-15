@@ -1,0 +1,29 @@
+body {
+    background: #f0fbf8;
+}
+.nodes-card-text {
+    font-size: 80%;
+}
+.copy_button {
+    cursor: pointer;
+}
+
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotating 2s linear infinite;
+}
+
+.subdiv {
+    padding: 15px;
+}
+td {
+    word-break: break-word;
+}

@@ -1,0 +1,31 @@
+.section-2 {
+  background: var(--background-color) !important;
+}
+.section-2 .row {
+  background: var(--background-color) !important;
+}
+.section-2-group {
+  width: 100%;
+}
+.section-2-paragraph {
+  text-align: left;
+  font: normal normal medium 22px/33px Poppins;
+  letter-spacing: 0px;
+  color: #13254a;
+  opacity: 0.7;
+}
+.section-2-verticle-line {
+  border-right: 6px solid #dce8f9;
+  width: 12px;
+  height: 141px;
+  margin-left: 45%;
+  margin-top: 10%;
+}
+img.d-inline-block.align-centre.section-2-tezos {
+  width: 50px;
+  height: 15%;
+}
+.section-2 {
+  background-color: #f9fbfe;
+  border-top: #f9fbfe;
+}

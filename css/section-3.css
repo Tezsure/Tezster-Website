@@ -1,0 +1,17 @@
+.section-3-verticle-line {
+  border-right: 6px solid #dce8f9;
+  width: 12px;
+  height: 141px;
+  margin-top: 10px;
+  margin-right: 17px;
+}
+.section-3-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.section-3-inner-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

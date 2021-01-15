@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200&display=swap');
+@import url('./section-1.css');
+@import url('./section-2.css');
+@import url('./section-3.css');
+:root {
+  --tezster-button-color: #50e0b0;
+  --text-font: 'Poppins', sans-serif;
+  --background-color: #f9fbfe;
+}
+* {
+  border-radius: 0 !important;
+  font-family: var(--text-font);
+}
+.card:nth-of-type(even) {
+  background: #00e190 !important;
+  color: #fff !important;
+  border: 1px solid #00e190 !important;
+  box-shadow: 0 0.125rem 3.25rem rgba(0, 0, 0, 0.075) !important;
+}
+.card:nth-of-type(odd) {
+  background: #fff !important;
+  color: #13254a !important;
+  border: 1px solid #fff !important;
+  box-shadow: 0 0.125rem 3.25rem rgba(0, 0, 0, 0.075) !important;
+}
+.card-footer {
+  padding: 0.75rem 1.25rem !important;
+  background-color: transparent !important;
+  border-top: unset !important;
+}
+.card:nth-of-type(even) .section-9-paragraph {
+  font: normal normal medium 22px/33px Poppins;
+  letter-spacing: 0 !important;
+  opacity: 0.7 !important;
+  text-align: justify !important;
+  color: #fff;
+}
+.card:nth-of-type(odd) .section-9-paragraph {
+  font: normal normal medium 22px/33px Poppins;
+  letter-spacing: 0 !important;
+  opacity: 0.7 !important;
+  text-align: justify !important;
+  color: #13254a;
+}
+.card-footer-txt-section-9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 100px solid transparent;
+  border-right: 110px solid #00e190;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 0 solid transparent;
+  border-bottom: 205px solid transparent;
+  border-right: 110px solid #00e190;
+}
+.section-10-button {
+  background-color: #00e190 !important;
+  border-color: #00e190 !important;
+  color: #f3fdf9 !important;
+  font-size: small;
+}
+.section-11 {
+  font-size: smaller !important;
+}
+.quarter-cicle {
+  width: 80px;
+  height: 80px;
+  background: #00e190;
+  border-radius: 0 90px 0 0 !important;
+}
+.btn-tezster-web {
+  width: 40%;
+}
+*:focus {
+  outline: none !important;
+}
+img.d-inline-block.align-centre.tezter-bundle-image {
+  height: 40px !important;
+}
+.navbar-light .navbar-toggler {
+  border: 0 !important;
+}
+.container-info {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+}
+.section-1-header {
+  width: 40% !important;
+}
+.section-1-container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+}
+.heading-image {
+  height: 12%;
+  cursor: pointer;
+}
+.section-4-details-container {
+  margin-top: 15px;
+}
+.card-img-top {
+  width: 30px !important;
+  height: 30px !important;
+}
+.section-9 {
+  border-top: 2px solid #fff;
+}
+.tezster-gui-image {
+  height: 10% !important;
+  z-index: 999;
+}
+.tezter-bundle-image {
+  z-index: 999;
+}
+.how-section-header {
+  width: 70%;
+}
+.tezster-cli-image {
+  margin-left: -2px;
+  height: 10%;
+}
+.tezster-infra-image {
+  /* height: 15% !important; */
+  z-index: 9999;
+}
+.desciption-1-section {
+  width: 45% !important;
+}
+.footer-row p {
+  font-family: 'Quicksand', sans-serif;
+}
+.footer-row a {
+  font-family: 'Quicksand', sans-serif;
+}
+.footer-copyright {
+  font-family: 'Quicksand', sans-serif;
+}
+.infra-link {
+  color: #50e0b0;
+}
+iframe {
+  width: 100%;
+}
+button:focus {
+  outline: none !important;
+}
+p {
+  font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  .btn-tezster-web {
+    width: 80% !important;
+  }
+  .section-1-header {
+    width: 100% !important;
+  }
+  .btn-try {
+    width: auto;
+  }
+  .desciption-1-section {
+    width: 55% !important;
+  }
+}
+@media only screen and (max-width: 980px) and (min-width: 768px) {
+  .btn-tezster-web {
+    width: 80% !important;
+  }
+  .section-1-header {
+    width: 60% !important;
+  }
+  .how-section-header {
+    width: 100% !important;
+  }
+  .desciption-1-section {
+    width: 55% !important;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .btn-tezster-web {
+    width: 80% !important;
+  }
+  .section-11 p {
+    text-align: center !important;
+  }
+  .section-11 .container {
+    text-align: center !important;
+  }
+  .section-11 .btn-success {
+    margin-bottom: 10px !important;
+  }
+  h1.carousel-header {
+    font-size: x-large !important;
+    width: 100% !important;
+  }
+  img.d-inline-block.align-centre.section-2-group {
+    width: 80% !important;
+  }
+  .col-md-5 {
+    text-align: center !important;
+  }
+  p {
+    font-size: small !important;
+  }
+  .section-3 .section-3-logo1 {
+    justify-content: center !important;
+  }
+  .section-3 .section-3-image2 {
+    height: 100% !important;
+  }
+  .section-3 .section-3-image-container {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .section-2 .section-2-image2 {
+    height: 80% !important;
+  }
+  #myCarousel img.image-container {
+    margin-top: 0 !important;
+  }
+  img.d-inline-block.align-centre.section-2-group.section-4-image {
+    height: 80% !important;
+  }
+  .section-4-image-container {
+    text-align: center !important;
+  }
+  .section-5-image-container {
+    text-align: center !important;
+  }
+  .section-5-image {
+    height: 80% !important;
+  }
+  .section-6-image-container {
+    text-align: center !important;
+  }
+  .section-6-image {
+    height: 80% !important;
+  }
+  .section-7-image-container {
+    text-align: center !important;
+  }
+  .section-7-image {
+    height: 80% !important;
+  }
+  .container-info {
+    bottom: 2% !important;
+  }
+  .image-container {
+    margin-top: 0;
+  }
+  .how-section-header {
+    width: 100%;
+  }
+  .desciption-1-section {
+    width: 80% !important;
+  }
+}
+@media only screen and (max-width: 670px) and (min-width: 400px) {
+  .section-8-text {
+    width: 100% !important;
+  }
+  .section-11-footer-text {
+    justify-content: center;
+  }
+  .btn-try {
+    width: auto;
+  }
+  .tezster-gui-image {
+    height: 10% !important;
+  }
+  .how-section-header {
+    width: 100%;
+  }
+  .desciption-1-section {
+    width: 80% !important;
+  }
+  .btn-tezster-web {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  img.d-inline-block.align-left {
+    width: auto !important;
+  }
+  .section-8-text {
+    width: 100% !important;
+  }
+  .section-11-footer-text {
+    justify-content: center;
+  }
+  .section-4-details-container {
+    margin-top: 0px;
+  }
+  .section-8-header {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: large;
+    margin-bottom: 0rem !important;
+    margin-top: 0.5rem;
+  }
+  .btn-try {
+    width: auto;
+  }
+  .tezster-infra-image {
+    /* height: 15% !important; */
+    z-index: 9999;
+  }
+  .tezster-gui-image {
+    height: 8% !important;
+  }
+  img.d-inline-block.align-left.heading-image.tezster-cli-image {
+    height: 8% !important;
+  }
+  .desciption-1-section {
+    width: 80% !important;
+  }
+  .tezster-bundle-container {
+    margin-bottom: 10px;
+  }
+  .hall-header {
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+  }
+  .btn-tezster-web {
+    width: 80% !important;
+  }
+}
