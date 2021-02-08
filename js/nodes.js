@@ -9,7 +9,7 @@ async function GetMainnetNodes() {
         spinner.classList.add("rotating");
         const config = {
             method: 'get',
-            url: 'https://cors-anywhere.herokuapp.com/https://api.tzstats.com/tables/block?time.gte=today&limit=1',
+            url: 'https://api.tzstats.com/tables/block?time.gte=today&limit=1',
             headers: {}
         };
         const response = await axios(config);
@@ -38,7 +38,7 @@ async function GetDelphinetNodes() {
         spinner.classList.add("rotating");
         const config = {
             method: 'get',
-            url: 'https://cors-anywhere.herokuapp.com/https://api.delphi.tzstats.com/tables/block?time.gte=today&limit=1',
+            url: 'https://api.delphi.tzstats.com/tables/block?time.gte=today&limit=1',
             headers: {}
         };
         const response = await axios(config);
