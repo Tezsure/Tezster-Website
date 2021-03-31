@@ -166,6 +166,13 @@ function InitialLoad() {
     document.getElementById('level_testnet').innerText = 'please wait...';
     document.getElementById('baker_testnet').innerText = 'please wait...';
 
+    document.getElementById('protocol_florence').innerText = 'please wait...';
+    document.getElementById('chain_id_florence').innerText = 'please wait...';
+    document.getElementById('block_hash_florence').innerText = 'please wait...';
+    document.getElementById('cycle_florence').innerText = 'please wait...';
+    document.getElementById('level_florence').innerText = 'please wait...';
+    document.getElementById('baker_florence').innerText = 'please wait...';
+
     setTimeout(() => {
         return Promise.all([
             GetMainnetNodes(),
