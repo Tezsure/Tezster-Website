@@ -57,7 +57,7 @@ async function GetTestnetNodes() {
         spinner.classList.add('rotating');
         const config = {
             method: 'get',
-            url: 'https://testnet.tezster.tech/chains/main/blocks/head',
+            url: 'https://edonet.tezster.tech/chains/main/blocks/head',
             headers: {},
         };
         const response = await axios(config);
@@ -105,7 +105,7 @@ async function GetFlorenceNodes() {
         spinner.classList.add('rotating');
         const config = {
             method: 'get',
-            url: 'https://florence.tezster.tech/chains/main/blocks/head',
+            url: 'https://testnet.tezster.tech/chains/main/blocks/head',
             headers: {},
         };
         const response = await axios(config);

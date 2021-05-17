@@ -1,330 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#50e0b0" />
+        <meta name="msapplication-navbutton-color" content="#50e0b0" />
+        <link rel="icon" href="./assets/Group 37312@2x.png" />
+        <title>Tezster</title>
+        <meta
+            name="description"
+            content="Building developer-friendly tools to interact with Tezos blockchain."
+        />
+        <meta
+            name="keywords"
+            content="tezster-nodes,tezsure-nodes,tezster-infra"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="copyright" content="Tezsure India Pvt Ltd" />
+        <meta name="language" content="EN" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#50e0b0" />
-    <meta name="msapplication-navbutton-color" content="#50e0b0" />
-    <link rel="icon" href="./assets/Group 37312@2x.png" />
-    <title>Tezster</title>
-    <meta name="description" content="Building developer-friendly tools to interact with Tezos blockchain." />
-    <meta name="keywords" content="tezster-nodes,tezsure-nodes,tezster-infra">
-    <meta name="robots" content="index, follow">
-    <meta name="copyright" content="Tezsure India Pvt Ltd">
-    <meta name="language" content="EN">
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/nodes.css" />
+    </head>
 
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/nodes.css" />
-</head>
+    <body>
+        <main role="main">
+            <div
+                class="container-fluid section-1-container-fluid"
+                style="padding-right: 0px; padding-left: 0px"
+            >
+                <header class="main-header" style="width: 100%">
+                    <nav
+                        class="navbar navbar-expand-md navbar-expand-lg navbar-light bg-light"
+                    >
+                        <div class="container">
+                            <a class="navbar-brand" href="/">
+                                <img
+                                    src="./assets/Group 40.svg"
+                                    width="70"
+                                    height="25"
+                                    class="d-inline-block align-top"
+                                    alt=""
+                                    loading="lazy"
+                                />
+                            </a>
+                            <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse"
+                                aria-controls="navbarCollapse"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </main>
 
-<body>
-    <main role="main">
-        <div class="container-fluid section-1-container-fluid" style="padding-right: 0px; padding-left: 0px">
-            <header class="main-header" style="width: 100%">
-                <nav class="navbar navbar-expand-md navbar-expand-lg navbar-light bg-light">
-                    <div class="container">
-                        <a class="navbar-brand" href="/">
-                            <img src="./assets/Group 40.svg" width="70" height="25" class="d-inline-block align-top"
-                                alt="" loading="lazy" />
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                </nav>
+        <div class="container" style="margin-top: 2%">
+            <header
+                style="font-weight: bold; font-size: 130%; text-align: center"
+            >
+                Tezster Public Nodes
             </header>
         </div>
-    </main>
-
-    <div class="container" style="margin-top: 2%">
-        <header style="font-weight: bold; font-size: 130%;
-                    text-align: center;">
-            Tezster Public Nodes
-        </header>
-    </div>
-    <div class="container-fluid" style="margin-top: 2%">
-        <div class="row row-cols-1 row-cols-md-3">
-            <div class="col mb-6 subdiv">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title" style="display: flex;
-                        justify-content: space-between;">Mainnet
-                            <span style="cursor: pointer;" onclick="GetMainnetNodes();" id="spinner_mainnet">
-
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise"
-                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-                                    <path
-                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-                                </svg>
-                            </span>
-                        </h5>
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Protocol</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="protocol_mainnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">chain_id</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="chain_id_mainnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Block hash</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="block_hash_mainnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Cycle</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="cycle_mainnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Level</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="level_mainnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Baker</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="baker_mainnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Rpc Link</p>
-                                    </th>
-                                    <td style="display: flex; justify-content: space-between">
-                                        <p class="nodes-card-text card-text" id="rpc_link_mainnet">
-                                            https://mainnet.tezster.tech
-                                        </p>
-                                        <span class="copy_button" id="copy_button"
-                                            onclick="__CopyText('rpc_link_mainnet')" style="margin-left: 5%"
-                                            data-toggle="tooltip" data-placement="right" title="click to copy">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-back"
-                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z" />
-                                            </svg>
-                                        </span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <div class="container-fluid" style="margin-top: 2%">
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-6 subdiv">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5
+                                class="card-title"
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                "
+                            >
+                                Mainnet
+                                <span
+                                    style="cursor: pointer"
+                                    onclick="GetMainnetNodes();"
+                                    id="spinner_mainnet"
+                                >
+                                    <svg
+                                        width="1em"
+                                        height="1em"
+                                        viewBox="0 0 16 16"
+                                        class="bi bi-arrow-clockwise"
+                                        fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                                        />
+                                        <path
+                                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                                        />
+                                    </svg>
+                                </span>
+                            </h5>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Protocol
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="protocol_mainnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                chain_id
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="chain_id_mainnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Block hash
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="block_hash_mainnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Cycle
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="cycle_mainnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Level
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="level_mainnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Baker
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="baker_mainnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Rpc Link
+                                            </p>
+                                        </th>
+                                        <td
+                                            style="
+                                                display: flex;
+                                                justify-content: space-between;
+                                            "
+                                        >
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="rpc_link_mainnet"
+                                            >
+                                                https://mainnet.tezster.tech
+                                            </p>
+                                            <span
+                                                class="copy_button"
+                                                id="copy_button"
+                                                onclick="__CopyText('rpc_link_mainnet')"
+                                                style="margin-left: 5%"
+                                                data-toggle="tooltip"
+                                                data-placement="right"
+                                                title="click to copy"
+                                            >
+                                                <svg
+                                                    width="1em"
+                                                    height="1em"
+                                                    viewBox="0 0 16 16"
+                                                    class="bi bi-back"
+                                                    fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col mb-6 subdiv">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title" style="display: flex;
-                        justify-content: space-between;">Testnet
-                            <span style="cursor: pointer;" onclick="GetTestnetNodes();" id="spinner_testnet">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise"
-                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-                                    <path
-                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-                                </svg>
-                            </span>
-                        </h5>
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Protocol</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="protocol_testnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">chain_id</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="chain_id_testnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Block hash</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="block_hash_testnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Cycle</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="cycle_testnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Level</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="level_testnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Baker</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="baker_testnet"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Rpc Link</p>
-                                    </th>
-                                    <td style="display: flex; justify-content: space-between">
-                                        <p class="nodes-card-text card-text" id="rpc_link_testnet">
-                                            https://testnet.tezster.tech
-                                        </p>
-                                        <span class="copy_button" id="copy_button"
-                                            onclick="__CopyText('rpc_link_testnet')" style="margin-left: 5%"
-                                            data-toggle="tooltip" data-placement="right" title="click to copy">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-back"
-                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z" />
-                                            </svg>
-                                        </span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="col mb-6 subdiv">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5
+                                class="card-title"
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                "
+                            >
+                                Testnet Florence
+                                <span
+                                    style="cursor: pointer"
+                                    onclick="GetFlorenceNodes();"
+                                    id="spinner_florence"
+                                >
+                                    <svg
+                                        width="1em"
+                                        height="1em"
+                                        viewBox="0 0 16 16"
+                                        class="bi bi-arrow-clockwise"
+                                        fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                                        />
+                                        <path
+                                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                                        />
+                                    </svg>
+                                </span>
+                            </h5>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Protocol
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="protocol_florence"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                chain_id
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="chain_id_florence"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Block hash
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="block_hash_florence"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Cycle
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="cycle_florence"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Level
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="level_florence"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Baker
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="baker_florence"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Rpc Link
+                                            </p>
+                                        </th>
+                                        <td
+                                            style="
+                                                display: flex;
+                                                justify-content: space-between;
+                                            "
+                                        >
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="rpc_link_florence"
+                                            >
+                                                https://testnet.tezster.tech
+                                            </p>
+                                            <span
+                                                class="copy_button"
+                                                id="copy_button"
+                                                onclick="__CopyText('rpc_link_florence')"
+                                                style="margin-left: 5%"
+                                                data-toggle="tooltip"
+                                                data-placement="right"
+                                                title="click to copy"
+                                            >
+                                                <svg
+                                                    width="1em"
+                                                    height="1em"
+                                                    viewBox="0 0 16 16"
+                                                    class="bi bi-back"
+                                                    fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col mb-6 subdiv">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title" style="display: flex;
-                    justify-content: space-between;">Florence
-                            <span style="cursor: pointer;" onclick="GetFlorenceNodes();" id="spinner_florence">
-
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise"
-                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-                                    <path
-                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-                                </svg>
-                            </span>
-                        </h5>
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Protocol</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="protocol_florence"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">chain_id</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="chain_id_florence"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Block hash</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="block_hash_florence"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Cycle</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="cycle_florence"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Level</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="level_florence"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Baker</p>
-                                    </th>
-                                    <td>
-                                        <p class="nodes-card-text card-text" id="baker_florence"></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <p class="nodes-card-text card-text">Rpc Link</p>
-                                    </th>
-                                    <td style="display: flex; justify-content: space-between">
-                                        <p class="nodes-card-text card-text" id="rpc_link_florence">
-                                            https://florence.tezster.tech
-                                        </p>
-                                        <span class="copy_button" id="copy_button"
-                                            onclick="__CopyText('rpc_link_florence')" style="margin-left: 5%"
-                                            data-toggle="tooltip" data-placement="right" title="click to copy">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-back"
-                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd"
-                                                    d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z" />
-                                            </svg>
-                                        </span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="col mb-6 subdiv">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5
+                                class="card-title"
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                "
+                            >
+                                Edonet
+                                <span
+                                    style="cursor: pointer"
+                                    onclick="GetTestnetNodes();"
+                                    id="spinner_testnet"
+                                >
+                                    <svg
+                                        width="1em"
+                                        height="1em"
+                                        viewBox="0 0 16 16"
+                                        class="bi bi-arrow-clockwise"
+                                        fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                                        />
+                                        <path
+                                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                                        />
+                                    </svg>
+                                </span>
+                            </h5>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Protocol
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="protocol_testnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                chain_id
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="chain_id_testnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Block hash
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="block_hash_testnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Cycle
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="cycle_testnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Level
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="level_testnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Baker
+                                            </p>
+                                        </th>
+                                        <td>
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="baker_testnet"
+                                            ></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p
+                                                class="nodes-card-text card-text"
+                                            >
+                                                Rpc Link
+                                            </p>
+                                        </th>
+                                        <td
+                                            style="
+                                                display: flex;
+                                                justify-content: space-between;
+                                            "
+                                        >
+                                            <p
+                                                class="nodes-card-text card-text"
+                                                id="rpc_link_testnet"
+                                            >
+                                                https://edonet.tezster.tech
+                                            </p>
+                                            <span
+                                                class="copy_button"
+                                                id="copy_button"
+                                                onclick="__CopyText('rpc_link_testnet')"
+                                                style="margin-left: 5%"
+                                                data-toggle="tooltip"
+                                                data-placement="right"
+                                                title="click to copy"
+                                            >
+                                                <svg
+                                                    width="1em"
+                                                    height="1em"
+                                                    viewBox="0 0 16 16"
+                                                    class="bi bi-back"
+                                                    fill="currentColor"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="./js/jquery-3.5.1.slim.min.js"></script>
-    <script src="./js/popper.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/nodes.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</body>
-
+        <script src="./js/jquery-3.5.1.slim.min.js"></script>
+        <script src="./js/popper.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/nodes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </body>
 </html>
